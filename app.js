@@ -11,14 +11,14 @@ const app = express();
 app.set("view engine", "hbs");
 app.use(express.urlencoded({ extended: true })); //doc du lieu nguoi dung giui toi
 
-// const hbs = require("hbs");
-// hbs.registerHelper("pricecheck", function (price) {
-//   if (price >= 50) {
-//     return "red";
-//   } else  (price >= 70) 
-//     return "green";
+const hbs = require("hbs");
+hbs.registerHelper("pricecheck", function (price) {
+  if (price >= 50) {
+    return "red";
+  } else  (price >= 70) 
+    return "green";
   
-// });
+});
 const path = require("path");
 app.use(
   "/css",
